@@ -1,0 +1,10 @@
+5
+(0,0)Palembang
+(0,1)Empat Lawang
+(0,2)Prabumulih
+(1,0)Indralaya
+(1,1)Kayu Agung
+Palembang,Indralaya
+Palembang,Prabumulih
+Kayu Agung,Indralaya
+Prabumulih,Empat Lawang
