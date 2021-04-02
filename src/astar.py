@@ -20,12 +20,12 @@ def astar(graf, nodeFrom, nodeTo):
                 temp[j] = currentState[j]
             temp.append(nodeAdjacent[i])
             result.append(temp)
-            cost.append(currentCost + graf.getDistant(nodeFrom,nodeAdjacent[i])) #+ graf.getDistant(nodeAdjacent[i], nodeTo))
+            cost.append(currentCost + graf.getDistant(nodeFrom,nodeAdjacent[i]) + graf.getDistant(nodeAdjacent[i], nodeTo))
             
         for i in range(len(result)):
             if(cost[i] == min(cost)):
                 currentState = result[i]
-                currentCost = cost[i]# - graf.getDistant(result[i][-1], nodeTo)
+                currentCost = cost[i] - graf.getDistant(result[i][-1], nodeTo)
                 nodeFrom = result[i][len(result[i])-1]
                 break
 
@@ -34,7 +34,7 @@ def astar(graf, nodeFrom, nodeTo):
     for i in range(len(result)):
         if(cost[i] == min(cost) and result[i][-1] == nodeTo):
             fixResult = result[i]
-            fixCost = cost[i]
+            fixCost = cost[i] - graf.getDistant(result[i][-1], nodeTo)
             break
     
     return (fixResult,fixCost)
