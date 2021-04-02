@@ -33,25 +33,18 @@ for i in range(numOfNode):
         j += 1
     nodes.append(node)
 
-#Inisialisasi adjacent
+#Mendapatkan adjacent node
 for i in range(numOfNode):
+    #Inisialisasi adjacent
     adjacentNode.append([])
 
-#Mendapatkan adjacent node
-while(True):
+    #Menentukan adjacent node
     adjacent = fileName.readline()
-    if(adjacent == ""):
-        break
-    adjacent = list(map(str, adjacent.split(',')))
-    if(adjacent[1][-1] == "\n"):
-        adjacent[1] = adjacent[1][:-1]
+    adjacent = list(map(str, adjacent.split(' ')))
+    if(adjacent[len(adjacent)-1][-1] == '\n'):
+        adjacent[len(adjacent)-1] = adjacent[len(adjacent)-1][:-1]
 
-    #Mencatat adjacent node sebelah kanan
-    for i in range(len(nodes)):
-        if(adjacent[0] == nodes[i]):
-            adjacentNode[i].append(adjacent[1])
-
-    #Mencatat adjacent node sebelah kiri
-    for i in range(len(nodes)):
-        if(adjacent[1] == nodes[i]):
-            adjacentNode[i].append(adjacent[0])
+    #Memasukkan adjacent node
+    for j in range(numOfNode):
+        if(adjacent[j] == '1'):
+            adjacentNode[i].append(nodes[j])
