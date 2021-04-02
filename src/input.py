@@ -24,7 +24,7 @@ for i in range(numOfNode):
     while(content[j] != ')'):
         y += content[j]
         j += 1
-    nodeCoordinate.append((int(x),int(y)))
+    nodeCoordinate.append((float(x),float(y)))
     j += 1
 
     #Mendapatkan node
