@@ -7,6 +7,7 @@ numOfNode = int(fileName.readline())
 nodes = []
 adjacentNode = []
 nodeCoordinate = []
+edges = []
 
 #Mendapatkan koordinat dan node
 for i in range(numOfNode):
@@ -48,3 +49,4 @@ for i in range(numOfNode):
     for j in range(numOfNode):
         if(adjacent[j] == '1'):
             adjacentNode[i].append(nodes[j])
+            edges.append([nodes[i],nodes[j]])
