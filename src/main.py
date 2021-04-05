@@ -36,9 +36,14 @@ pos = {}
 for i in range(g.getNumOfNode()):
     pos[nodes[i]] = nodeCoordinate[i]
 
+choosenEdges = []
+for i in range(len(answer[0]) - 1):
+    choosenEdges.append([answer[0][i],answer[0][i+1]])
+
 #Visulisasi Graph
 G = nx.Graph()
 G.add_nodes_from(nodes)
 G.add_edges_from(edges)
-nx.draw_networkx(G, pos, node_color="red")
+nx.draw_networkx(G, pos, node_color="blue", edge_color="blue")
+nx.draw_networkx(G, pos, nodelist=answer[0], node_color="red", edgelist=choosenEdges, edge_color="red")
 plt.show()
