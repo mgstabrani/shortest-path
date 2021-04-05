@@ -9,9 +9,12 @@ g = Graf(nodes, adjacentNode, nodeCoordinate)
 while(True):
     #Input node awal dan node akhir
     print(50*"=")
-    nodeFrom = input("Masukkan lokasi awal: ")
-    nodeTo = input("Masukkan lokasi tujuan: ")
-
+    for i in range(g.getNumOfNode()):
+        print(str(i+1) + ". " + nodes[i])
+    nodeFromInt = int(input("Masukkan lokasi awal (angka sesuai yang di atas): "))
+    nodeToInt = int(input("Masukkan lokasi tujuan (angka yang sesuai di atas): "))
+    nodeFrom = nodes[nodeFromInt-1]
+    nodeTo = nodes[nodeToInt-1]
     #Mencari apakah nodeFrom dan nodeTo memiliki jalur
     hasil = []
     dikunjungi = []
@@ -27,7 +30,7 @@ while(True):
     if(found):
         #Mencari jarak dan rute terpendek
         answer = astar(g,nodeFrom, nodeTo)
-        print("Jarak terdekat: " + str(answer[1]) + " km")
+        print("Jarak terdekat: " + str(answer[1]*100) + " km")
         print("Rute yang ditempuh: ", end=" ")
         for i in range(len(answer[0])-1):
             print(answer[0][i], end=" -> ")
