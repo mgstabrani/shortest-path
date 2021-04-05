@@ -1,4 +1,5 @@
 #Input file
+print(50*"=")
 fileName = input("Masukkan file: ")
 fileName = open(fileName, 'r')
 numOfNode = int(fileName.readline())
