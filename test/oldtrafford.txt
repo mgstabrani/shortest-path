@@ -1,0 +1,23 @@
+11
+(-2.275084,53.461008)Masjid E Hidayah
+(-2.268837,53.463587)Chorlton Street Post Office
+(-2.264685,53.464392)Old Traffod Community Academy
+(-2.262467,53.464797)Bright Horizons Trafford Nursery and Preschool
+(-2.261317,53.465030)The Rivers Apartments
+(-2.263074,53.465104)Jordans Displays
+(-2.260117,53.465256)Erskine Street
+(-2.261579,53.465871)Glazebrook Apartments
+(-2.260193,53.466267)Judah City Of Praise
+(-2.260472,53.466757)Christ Family Church
+(-2.260579,53.466951)St Lawrence Pharmacy
+0 0 0 0 0 0 0 0 0 0 0
+0 0 1 0 0 0 0 0 0 0 0
+0 1 0 1 0 0 0 0 0 0 0
+0 0 1 0 1 0 0 0 0 0 0
+0 0 0 1 0 0 1 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 1 0 0 1 0 0 0
+0 0 0 0 0 0 1 0 0 0 0
+0 0 0 0 0 0 0 0 0 1 0
+0 0 0 0 0 0 0 0 1 0 1
+0 0 0 0 0 0 0 0 0 1 0
