@@ -1,0 +1,21 @@
+10
+(107.607625,-6.921283)Tugu Asia Afrika
+(107.607915,-6.921278)Terowongan Jalan Asia-Afrika
+(107.608301,-6.921289)PT. PLN (Persero) Unit Induk Distribusi Jawa Barat
+(107.607191,-6.921119)ATM BANK BRI
+(107.607669,-6.921497)Masjid Agung Bandung
+(107.607616,-6.921790)Aneka Rasa Toko
+(107.607624,-6.922560)Ambu Kitchen
+(107.608712,-6.921329)Kebab Bosman Cikawao
+(107.608805,-6.921023)Asia Afrika
+(107.609384,-6.921413)Wisma Bumiputera
+0 1 0 1 1 0 0 0 0 0
+1 0 1 0 0 0 0 0 0 0
+0 1 0 0 0 0 0 1 0 0
+1 0 0 0 0 0 0 0 0 0
+1 0 0 0 0 1 0 0 0 0
+0 0 0 0 1 0 1 0 0 0
+0 0 0 0 0 1 0 0 0 0
+0 0 1 0 0 0 0 0 1 1
+0 0 0 0 0 0 0 1 0 0
+0 0 0 0 0 0 0 1 0 0

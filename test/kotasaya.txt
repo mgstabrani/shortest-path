@@ -1,0 +1,21 @@
+10
+(104.747688,-2.954355)Jupiter Futsal
+(104.748348,-2.955044)Palcomtech
+(104.748240,-2.955862)Rumah Sakit Hermina Palembang
+(104.746038,-2.955786)favehotel Palembang
+(104.746828,-2.952563)Masjid Jami' Al Burhan
+(104.746985,-2.952955)STIQ Al-Lathifiyyah Palembang
+(104.746680,-2.952319)Rumah Saya
+(104.746032,-2.951536)Waduk FIF Group Palembang
+(104.748520,-2.952824)Pondok Pesantren Tahfizhul Qur'an Putri
+(104.750578,-2.954225)Kawasaki Basuki Rahmat
+0 1 0 0 0 1 0 0 0 0
+1 0 1 1 0 0 0 0 0 1
+0 1 0 0 0 0 0 0 0 0
+0 1 0 0 0 0 0 0 0 0
+0 0 0 0 0 1 1 0 0 0
+1 0 0 0 1 0 0 0 0 0
+0 0 0 0 1 0 0 1 0 0
+0 0 0 0 0 0 1 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 1 0 0 0 0 0 0 0 0
