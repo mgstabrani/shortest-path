@@ -1,7 +1,7 @@
 import folium
 
 def mapVisualization(g,nodeTo,nodes,answer,found, choosenEdges):
-    m = folium.Map(location=[g.getOrdinat(nodeTo), g.getAbsis(nodeTo)], zoom_start=5)
+    m = folium.Map(location=[g.getOrdinat(nodeTo), g.getAbsis(nodeTo)], zoom_start=20)
 
     #Mewarnai seluruh node dan edge
     for i in range(g.getNumOfNode()):
