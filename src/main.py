@@ -31,9 +31,14 @@ if(found):
 else:
     print(nodeFrom, "ke", nodeTo, "tidak memiliki jalur.")
 
+#Set posisi node
+pos = {}
+for i in range(g.getNumOfNode()):
+    pos[nodes[i]] = nodeCoordinate[i]
+
 #Visulisasi Graph
 G = nx.Graph()
 G.add_nodes_from(nodes)
 G.add_edges_from(edges)
-nx.draw_networkx(G)
+nx.draw_networkx(G, pos, node_color="red")
 plt.show()
