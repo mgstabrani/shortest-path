@@ -1,5 +1,6 @@
 from graf import Graf
 
+#Algoritma A*
 def astar(graf, nodeFrom, nodeTo):
     nodeFrom = nodeFrom
     result = [[nodeFrom]]
@@ -38,3 +39,33 @@ def astar(graf, nodeFrom, nodeTo):
             break
     
     return (fixResult,fixCost)
+
+#Pencarian node menggunakan algoritma DFS
+def dfsExploreNode(graf, nodeFrom, nodeTo, dikunjungi, hasil):
+    if(dikunjungi[graf.getIdxNode(nodeFrom)] == 0):
+        dikunjungi[graf.getIdxNode(nodeFrom)] = 1
+        hasil.append(nodeFrom)
+    if(nodeFrom == nodeTo):
+        return True
+    else:
+        if(len(graf.getNodeAdjacent(nodeFrom)) == 0):
+            return False
+        else:
+            isExist = False
+            connectNodes = []
+            adjacent = graf.getNodeAdjacent(nodeFrom)
+            for i in range(len(graf.getNodeAdjacent(nodeFrom))):
+                connectNodes.append(adjacent[i])
+            connectNodes.sort()
+            for i in range(len(graf.getNodeAdjacent(nodeFrom))):
+                if(dikunjungi[graf.getIdxNode(connectNodes[i])] == 0):
+                    isExist = True
+                    break
+            if(not isExist):
+                hasil.pop(len(hasil) - 1)
+                if(len(hasil) == 0):
+                    return False
+                else:
+                    return dfsExploreNode(graf, hasil[len(hasil) - 1], nodeTo, dikunjungi, hasil)
+            else:
+                return dfsExploreNode(graf, connectNodes[i], nodeTo, dikunjungi, hasil)
