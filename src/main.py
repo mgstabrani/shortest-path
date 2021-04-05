@@ -17,6 +17,9 @@ for i in range(g.getNumOfNode()):
     dikunjungi.append(0)
 found = dfsExploreNode(g, nodeFrom, nodeTo, dikunjungi, hasil)
 
+answer = []
+choosenEdges = []
+
 #Jika ada jalur
 if(found):
     #Mencari jarak dan rute terpendek
@@ -27,6 +30,10 @@ if(found):
         print(answer[0][i], end=" -> ")
     print(answer[0][len(answer[0])-1])
 
+    #Set edge yang diwarnai berbeda
+    for i in range(len(answer[0]) - 1):
+        choosenEdges.append([answer[0][i],answer[0][i+1]])
+
 #Jika tidak ada jalur
 else:
     print(nodeFrom, "ke", nodeTo, "tidak memiliki jalur.")
@@ -36,14 +43,11 @@ pos = {}
 for i in range(g.getNumOfNode()):
     pos[nodes[i]] = nodeCoordinate[i]
 
-choosenEdges = []
-for i in range(len(answer[0]) - 1):
-    choosenEdges.append([answer[0][i],answer[0][i+1]])
-
 #Visulisasi Graph
 G = nx.Graph()
 G.add_nodes_from(nodes)
 G.add_edges_from(edges)
 nx.draw_networkx(G, pos, node_color="blue", edge_color="blue")
-nx.draw_networkx(G, pos, nodelist=answer[0], node_color="red", edgelist=choosenEdges, edge_color="red")
+if(found):
+    nx.draw_networkx(G, pos, nodelist=answer[0], node_color="red", edgelist=choosenEdges, edge_color="red")
 plt.show()
