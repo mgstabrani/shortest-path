@@ -1,6 +1,8 @@
 # shortest-path
 ## Deskripsi Singkat Program
+Aplikasi sederhana yang dapat menentukan jarak terpendek dari suatu tempat ke tempat lain, dengan memanfaatkan algoritma A*. Tempat-tempat tersebut direpresentasikan dengan graf dan dapat divisiualisasi menjadi map.
 ## Penjelasan Singkat Algoritma A* yang Diimplementasikan
+Mula-mula input dari file yang berupa nama lokasi, koordinat, beserta lokasi-lokasi yang saling terhubung diubah menjadi graf. Kemudian dipilih lokasi (simpul) awal dan akhir. Simpul awal akan melihat simpul-simpul tetangganya dan menghitung jarak euclidean antara simpul awal dan simpul tetangga ditambah jarak euclidean dari simpul tetangga ke simpul akhir. Simpul tetangga yang memiliki nilai terkecil akan dikunjungi terlebih dahulu. Begitu seterusnya sampai menemukan simpul akhir dengan nilai terkecil.
 ## Requirements dan Instalasi
 ### Instalasi
 - Python 3
