@@ -17,7 +17,9 @@ pip3 install matplotlib
 pip install folium
 ``` 
 atau
-```pip3 install folium```
+```
+pip3 install folium
+```
 - Library networkx 
 ```
 pip install networkx
