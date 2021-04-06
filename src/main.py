@@ -44,6 +44,7 @@ while(True):
     else:
         print(nodeFrom, "ke", nodeTo, "tidak memiliki jalur.")
 
+    #Menu pilih visualisasi
     print(50*"=")
     print("Visualisasi:")
     print("1. Graf")
@@ -51,10 +52,11 @@ while(True):
     visualize = int(input("Masukkan pilihan: "))
 
     if(visualize == 1):
-        grafVisualization(g, nodes, edges, found, answer, choosenEdges)
+        grafVisualization(g, nodes, edges, found, answer, choosenEdges, nodeFrom, nodeTo)
     elif(visualize == 2):
-        mapVisualization(g,nodeTo,nodes,answer, found, choosenEdges)
+        mapVisualization(g,nodeFrom,nodeTo,nodes,answer, found, choosenEdges)
 
+    #Menu lanjut program
     print(50*"=")
     print("Lanjut?")
     print("1. Ya")
