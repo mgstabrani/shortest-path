@@ -1,6 +1,8 @@
 # shortest-path
 ## Deskripsi Singkat Program
+Aplikasi sederhana yang dapat menentukan jarak terpendek dari suatu tempat ke tempat lain, dengan memanfaatkan algoritma A*. Tempat-tempat tersebut direpresentasikan dengan graf dan dapat divisiualisasi menjadi map.
 ## Penjelasan Singkat Algoritma A* yang Diimplementasikan
+Mula-mula input dari file yang berupa nama lokasi, koordinat, beserta lokasi-lokasi yang saling terhubung diubah menjadi graf. Kemudian dipilih lokasi (simpul) awal dan akhir. Simpul awal akan melihat simpul-simpul tetangganya dan menghitung jarak euclidean antara simpul awal dan simpul tetangga ditambah jarak euclidean dari simpul tetangga ke simpul akhir. Simpul tetangga yang memiliki nilai terkecil akan dikunjungi terlebih dahulu. Begitu seterusnya sampai menemukan simpul akhir dengan nilai terkecil.
 ## Requirements dan Instalasi
 ### Instalasi
 - Python 3
@@ -39,6 +41,7 @@ jumlah node
 0 0 0
 1 0 0
 ```
+**Note: koordinat sesuai dengan koordinat pada google map, dengan x adalah koordinat di sebelah kanan pada google map, dan y adalah koordinat di sebelah kiri pada google map. Pintu Depan ITB tertulis (-6.893164,107.610430) pada google map, maka ubahlah menjadi (107.610430,-6.893164) pada file input.**
 #### Contoh File
 ```
 15
@@ -83,7 +86,11 @@ atau
 ```
 python main.py
 ```
-- Kemudian masukkan input file
+- Kemudian masukkan input file.
+- Pilih lokasi awal dan akhir.
+- Pilih visualisasi (map atau graf).
+- Jika memilih graf, gambar graf akan langsung dimunculkan.
+- Apabila memilih map, gambar akan disimpan di map.html. Buka map.html di web browser.
 ### Contoh Input 
 #### File
 ```
@@ -120,8 +127,9 @@ Jarak terdekat: 1.3613788178268975 km
 Rute yang ditempuh:  Jl Margacinta -> SAMSAT -> Universitas Islam Nusantara -> Bengkel Motor
 ```
 #### Graf
-
+![Graf](https://github.com/mgstabrani/shortest-path/blob/main/img/graf.png)
 #### Map
+![Map](https://github.com/mgstabrani/shortest-path/blob/main/img/map.png)
 
 ## Author
 - [M. Hilal Alhamdy (13519024)](https://github.com/hilalhmdy)
