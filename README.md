@@ -74,6 +74,55 @@ jumlah node
 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0
 ```
 ## Cara Menggunakan Program
+### Menjalankan melalui main.py
+- Pastikan sudah berada di direktori src, kemudian ketikkan perintah berikut di terminal.
+```
+python3 main.py
+```
+atau
+```
+python main.py
+```
+- Kemudian masukkan input file
+### Contoh Input 
+#### File
+```
+10
+(107.641804,-6.946293)SAMSAT
+(107.640250,-6.954075)Jl Margacinta
+(107.641692,-6.954372)BRI
+(107.647529,-6.954982)Jl Cipalago
+(107.651788,-6.955439)BORMA
+(107.655117,-6.955761)Samudra Bangunan
+(107.643774,-6.944861)Universitas Islam Nusantara
+(107.646891,-6.943967)Bengkel Motor
+(107.648994,-6.944346)Cafe Resto
+(107.648282,-6.950633)Jl Cijawura
+0 1 0 0 0 0 1 0 0 0
+1 0 1 0 0 0 0 0 0 0
+0 1 0 1 0 0 0 0 0 0
+0 0 1 0 1 0 0 0 0 1
+0 0 0 1 0 1 0 0 0 0
+0 0 0 0 1 0 0 0 0 0
+1 0 0 0 0 0 0 1 0 0
+0 0 0 0 0 0 1 0 1 0
+0 0 0 0 0 0 0 1 0 1
+0 0 0 1 0 0 0 0 1 0
+```
+#### Program
+```
+Lokasi awal	: Jl Margacinta
+Lokasi tujuan	: Bengkel Motor
+```
+### Contoh Output
+```
+Jarak terdekat: 1.3613788178268975 km
+Rute yang ditempuh:  Jl Margacinta -> SAMSAT -> Universitas Islam Nusantara -> Bengkel Motor
+```
+#### Graf
+
+#### Map
+
 ## Author
 - [M. Hilal Alhamdy (13519024)](https://github.com/hilalhmdy)
 - [Mgs. Tabrani (13519122)](https://github.com/mgstabrani)
