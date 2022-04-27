@@ -3,7 +3,7 @@ class Graf:
         self.nodes = nodes
         self.adjacentNode = adjacentNode
         self.nodeCoordinate = nodeCoordinate
-    
+
     def getNumOfNode(self):
         return len(self.nodes)
 
@@ -11,7 +11,7 @@ class Graf:
         for i in range(len(self.nodes)):
             if(node == self.nodes[i]):
                 return i
-    
+
     def getNodeCoordinate(self, node):
         return self.nodeCoordinate[self.getIdxNode(node)]
 
