@@ -63,5 +63,4 @@ def dfsExploreNode(graf, nodeFrom, nodeTo, dikunjungi, hasil):
         if(len(hasil) == 0):
             return False
         return dfsExploreNode(graf, hasil[len(hasil) - 1], nodeTo, dikunjungi, hasil)
-    else:
-        return dfsExploreNode(graf, connectNodes[i], nodeTo, dikunjungi, hasil)
+    return dfsExploreNode(graf, connectNodes[i], nodeTo, dikunjungi, hasil)
