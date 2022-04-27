@@ -66,5 +66,5 @@ while(True):
 
     if(pilihan == 1):
         continue
-    elif(pilihan == 2):
+    if(pilihan == 2):
         sys.exit()
