@@ -25,7 +25,7 @@ def astar(graf, nodeFrom, nodeTo):
             if cost[i] == min(cost):
                 currentState = result[i]
                 currentCost = cost[i] - graf.getDistant(result[i][-1], nodeTo)
-                nodeFrom = result[i][len(result[i])-1]
+                nodeFrom = result[-1][-1]
                 break
 
     fixResult = []
@@ -61,5 +61,5 @@ def dfsExploreNode(graf, nodeFrom, nodeTo, dikunjungi, hasil):
         hasil.pop(len(hasil) - 1)
         if len(hasil) == 0:
             return False
-        return dfsExploreNode(graf, hasil[len(hasil) - 1], nodeTo, dikunjungi, hasil)
+        return dfsExploreNode(graf, hasil[-1], nodeTo, dikunjungi, hasil)
     return dfsExploreNode(graf, connectNodes[i], nodeTo, dikunjungi, hasil)

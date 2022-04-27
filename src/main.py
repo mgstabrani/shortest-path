@@ -35,7 +35,7 @@ while True:
         print("Rute yang ditempuh: ", end=" ")
         for i in range(len(answer[0])-1):
             print(answer[0][i], end=" -> ")
-        print(answer[0][len(answer[0])-1])
+        print(answer[-1][-1])
 
         #Set edge yang diwarnai berbeda
         for i in range(len(answer[0]) - 1):
