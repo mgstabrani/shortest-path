@@ -2,6 +2,7 @@ from astar import *
 from input import *
 from mapVisualization import *
 from grafVisualization import *
+import sys
 
 #Membuat graf dari file eksternal
 g = Graf(nodes, adjacentNode, nodeCoordinate)
@@ -66,4 +67,4 @@ while(True):
     if(pilihan == 1):
         continue
     elif(pilihan == 2):
-        exit()
+        sys.exit()
