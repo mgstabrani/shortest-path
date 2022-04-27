@@ -14,7 +14,7 @@ def grafVisualization(g, nodes, edges, found, answer, choosenEdges, nodeFrom, no
     nx.draw_networkx(G, pos, node_color="blue", font_size=8, edge_color="blue")
 
     #Jika jalur ketemu
-    if(found):
+    if found:
         nx.draw_networkx(G, pos, nodelist=answer[0], node_color="red", font_size=8, edgelist=choosenEdges, edge_color="red")
         nx.draw_networkx(G, pos, nodelist=[answer[0][-1]], node_color="green", font_size=8, edgelist=choosenEdges, edge_color="red")
         plt.xlabel("Jarak terdekat dari " + nodeFrom + " ke " + nodeTo + " adalah " + str(answer[1]*100) + " km")

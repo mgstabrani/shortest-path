@@ -7,7 +7,7 @@ import sys
 #Membuat graf dari file eksternal
 g = Graf(nodes, adjacentNode, nodeCoordinate)
 
-while(True):
+while True:
     #Input node awal dan node akhir
     print(50*"=")
     for i in range(g.getNumOfNode()):
@@ -28,7 +28,7 @@ while(True):
 
     print(50*"=")
     #Jika ada jalur
-    if(found):
+    if found:
         #Mencari jarak dan rute terpendek
         answer = astar(g,nodeFrom, nodeTo)
         print("Jarak terdekat: " + str(answer[1]*100) + " km")
@@ -52,9 +52,9 @@ while(True):
     print("2. Map")
     visualize = int(input("Masukkan pilihan: "))
 
-    if(visualize == 1):
+    if visualize == 1:
         grafVisualization(g, nodes, edges, found, answer, choosenEdges, nodeFrom, nodeTo)
-    elif(visualize == 2):
+    elif visualize == 2:
         mapVisualization(g,nodeFrom,nodeTo,nodes,answer, found, choosenEdges)
 
     #Menu lanjut program
@@ -64,7 +64,7 @@ while(True):
     print("2. Tidak")
     pilihan = int(input("Masukkan pilihan: "))
 
-    if(pilihan == 1):
+    if pilihan == 1:
         continue
-    if(pilihan == 2):
+    if pilihan == 2:
         sys.exit()

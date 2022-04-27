@@ -19,18 +19,18 @@ for i in range(numOfNode):
     x = ''
     y = ''
     node = ''
-    while(content[j] != ','):
+    while content[j] != ',':
         x += content[j]
         j += 1
     j += 1
-    while(content[j] != ')'):
+    while content[j] != ')':
         y += content[j]
         j += 1
     nodeCoordinate.append((float(x),float(y)))
     j += 1
 
     #Mendapatkan node
-    while(content[j] != '\n'):
+    while content[j] != '\n':
         node += content[j]
         j += 1
     nodes.append(node)
@@ -43,11 +43,11 @@ for i in range(numOfNode):
     #Menentukan adjacent node
     adjacent = fileName.readline()
     adjacent = list(map(str, adjacent.split(' ')))
-    if(adjacent[len(adjacent)-1][-1] == '\n'):
+    if adjacent[len(adjacent)-1][-1] == '\n':
         adjacent[len(adjacent)-1] = adjacent[len(adjacent)-1][:-1]
 
     #Memasukkan adjacent node
     for j in range(numOfNode):
-        if(adjacent[j] == '1'):
+        if adjacent[j] == '1':
             adjacentNode[i].append(nodes[j])
             edges.append([nodes[i],nodes[j]])
