@@ -43,8 +43,8 @@ for i in range(numOfNode):
     #Menentukan adjacent node
     adjacent = fileName.readline()
     adjacent = list(map(str, adjacent.split(' ')))
-    if adjacent[len(adjacent)-1][-1] == '\n':
-        adjacent[len(adjacent)-1] = adjacent[len(adjacent)-1][:-1]
+    if adjacent[-1][-1] == '\n':
+        adjacent[-1] = adjacent[-1][-1]
 
     #Memasukkan adjacent node
     for j in range(numOfNode):
