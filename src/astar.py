@@ -14,7 +14,7 @@ def astar(graf, nodeFrom, nodeTo):
                 result.pop(i)
                 cost.pop(i)
                 break
-    
+
         for i in range(len(nodeAdjacent)):
             temp = [[] for i in range(len(currentState))]
             for j in range(len(temp)):
@@ -22,7 +22,7 @@ def astar(graf, nodeFrom, nodeTo):
             temp.append(nodeAdjacent[i])
             result.append(temp)
             cost.append(currentCost + graf.getDistant(nodeFrom,nodeAdjacent[i]) + graf.getDistant(nodeAdjacent[i], nodeTo))
-            
+
         for i in range(len(result)):
             if(cost[i] == min(cost)):
                 currentState = result[i]
@@ -37,7 +37,7 @@ def astar(graf, nodeFrom, nodeTo):
             fixResult = result[i]
             fixCost = cost[i] - graf.getDistant(result[i][-1], nodeTo)
             break
-    
+
     return (fixResult,fixCost)
 
 #Pencarian node menggunakan algoritma DFS
