@@ -5,10 +5,10 @@ def astar(graf, nodeFrom, nodeTo):
     currentState = [nodeFrom]
     cost = [0]
     currentCost = 0
-    while(nodeFrom != nodeTo):
+    while nodeFrom != nodeTo:
         nodeAdjacent = graf.getNodeAdjacent(nodeFrom)
         for i in range(len(result)):
-            if(result[i] == currentState):
+            if result[i] == currentState:
                 result.pop(i)
                 cost.pop(i)
                 break
@@ -22,7 +22,7 @@ def astar(graf, nodeFrom, nodeTo):
             cost.append(currentCost + graf.getDistant(nodeFrom,nodeAdjacent[i]) + graf.getDistant(nodeAdjacent[i], nodeTo))
 
         for i in range(len(result)):
-            if(cost[i] == min(cost)):
+            if cost[i] == min(cost):
                 currentState = result[i]
                 currentCost = cost[i] - graf.getDistant(result[i][-1], nodeTo)
                 nodeFrom = result[i][len(result[i])-1]
@@ -40,12 +40,12 @@ def astar(graf, nodeFrom, nodeTo):
 
 #Pencarian node menggunakan algoritma DFS
 def dfsExploreNode(graf, nodeFrom, nodeTo, dikunjungi, hasil):
-    if(dikunjungi[graf.getIdxNode(nodeFrom)] == 0):
+    if dikunjungi[graf.getIdxNode(nodeFrom)] == 0:
         dikunjungi[graf.getIdxNode(nodeFrom)] = 1
         hasil.append(nodeFrom)
-    if(nodeFrom == nodeTo):
+    if nodeFrom == nodeTo:
         return True
-    if(len(graf.getNodeAdjacent(nodeFrom)) == 0):
+    if len(graf.getNodeAdjacent(nodeFrom)) == 0:
         return False
     isExist = False
     connectNodes = []
@@ -54,12 +54,12 @@ def dfsExploreNode(graf, nodeFrom, nodeTo, dikunjungi, hasil):
         connectNodes.append(adjacent[i])
     connectNodes.sort()
     for i in range(len(graf.getNodeAdjacent(nodeFrom))):
-        if(dikunjungi[graf.getIdxNode(connectNodes[i])] == 0):
+        if dikunjungi[graf.getIdxNode(connectNodes[i])] == 0:
             isExist = True
             break
-    if(not isExist):
+    if not isExist:
         hasil.pop(len(hasil) - 1)
-        if(len(hasil) == 0):
+        if len(hasil) == 0:
             return False
         return dfsExploreNode(graf, hasil[len(hasil) - 1], nodeTo, dikunjungi, hasil)
     return dfsExploreNode(graf, connectNodes[i], nodeTo, dikunjungi, hasil)

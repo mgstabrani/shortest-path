@@ -9,7 +9,7 @@ class Graf:
 
     def getIdxNode(self, node):
         for i in range(len(self.nodes)):
-            if(node == self.nodes[i]):
+            if node == self.nodes[i]:
                 return i
 
     def getNodeCoordinate(self, node):

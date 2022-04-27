@@ -16,7 +16,7 @@ def mapVisualization(g,nodeFrom,nodeTo,nodes,answer,found, choosenEdges):
     #Mewarnai rute
 
     #Jika jalur ketemu
-    if(found):
+    if found:
         for i in range(len(answer[0])):
             folium.Marker([g.getOrdinat(answer[0][i]), g.getAbsis(answer[0][i])],popup=answer[0][i], icon=folium.Icon(color='red', icon='leaf')).add_to(m)
         folium.Marker([g.getOrdinat(answer[0][-1]), g.getAbsis(answer[0][i])],popup=answer[0][-1], icon=folium.Icon(color='green', icon='leaf')).add_to(m)
