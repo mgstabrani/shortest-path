@@ -1,7 +1,6 @@
 
 #Algoritma A*
 def astar(graf, nodeFrom, nodeTo):
-    nodeFrom = nodeFrom
     result = [[nodeFrom]]
     currentState = [nodeFrom]
     cost = [0]
